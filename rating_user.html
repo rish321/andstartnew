@@ -26,7 +26,7 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
 <link type="text/css" src="js/gentleSelect/jquery-gentleSelect.min.css" />
 
 <!-- Check Script-->
-<script type="text/javascript" src="root/js/chk_user.js"></script>
+<script type="text/javascript" src="root/js/chk_rating.js"></script>
 <script type="text/javascript" src="js/gentleSelect/jquery-gentleSelect-min.js"></script>
 
 
@@ -94,19 +94,20 @@ hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </scri
   <div class="main">
 	   <div class="content-top">
 			 <div class="top-box" id="content_result" >
-				<form action="#" method="post" onsubmit="return chk_user();" >
+				<form action="#" method="post" onsubmit="return chk_rating();" >
 			<font size="5"> User Rating</font><br /><br /><br /> 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<label>Mobile No.</label><input type="text" name="mobileno" id="rating" >
+			<label>Mobile No.</label><input type="text" name="mobileno" id="mobileno" >
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<label>ID Proof No.</label><input type="text" name="id_proof" id="id_proof" >
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<label>Rating.</label><select name="rating" id="rating">
-			<option value=1>1</option>
-			<option value=2>2</option>
-			<option value=3>3</option>
-			<option value=4>4</option>
-			<option value=5>5</option>
-			<option value=6>6</option>
+			<label>Rating</label>
+			<select name="rating" id="rating">
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+				<option value=6>6</option>
 			</select> 
 				&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;			&nbsp;&nbsp;&nbsp;&nbsp;

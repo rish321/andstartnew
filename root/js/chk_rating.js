@@ -1,14 +1,17 @@
-function chk_user()
+function chk_rating()
 {
 
-//	alert("here");
-	form = document.forms[0];
-	worker = form.worker;
-	loc = form.mark;
-	language = form.language;
-	loc2 = form.series;
+//	return false;	
 
-	if(loc.value == '' || worker.value == '' )
+
+	form = document.forms[0];
+	
+	mobileno = form.mobileno;
+	id_proof = form.id_proof;
+	rating = form.rating;
+
+
+	if(mobileno.value == '' || id_proof.value == '' || rating.value == '' )
 	{
 		alert("You must provide all the requested field.");
 		return false;
@@ -17,34 +20,22 @@ function chk_user()
 	//return true;
 	data(form);
 // to be removed
-	return false;
+	return false; 
 }
 
 
 function data(form)
 {
-	
-	worker = form.worker.value;
-	loc = form.mark.value;
-	loc2 = form.series.value;
-	language = $('#language').val(); 
-	
-	//var params = "name="+name+"&mobileno="+mobileno+"&mark="+loc+"&series="+loc2+"&language="+language+"&id_proof_type="+id_type;
-	//params += "&id_proof_no="+id_no+"&occupation="+occupation;
+	mobileno = form.mobileno.value;
+	id_proof = form.id_proof.value;
+	rating = form.rating.value;
 
-
-		var params = "{worker:'"+worker+"', mark:'"+loc+"', series:'"+loc2+"', language:'"+language+"' }";
+	var params = "{mobileno:'"+mobileno+"', id_proof:'"+id_proof+"', rating:"+rating+" }";
 
 //	alert(params);
-	
 //	return false;
 	
-//	var json = JSON.stringify(eval("(" + params + ")"));
-//	var json = JSON.parse(params);
-
 	var json = JSON.stringify(eval('('+params+')'));
-
-//	alert(json);
 	
 	if (typeof String.prototype.startsWith != 'function') {
 		// see below for better implementation!
@@ -54,18 +45,18 @@ function data(form)
 	}
 
 
-	$.post('http://10.2.8.180/andsmartnew/result_user.php',{ json_obj:json }, 
+	$.post('http://10.2.8.180/andsmartnew/rating_result.php',{ json_obj:json }, 
 		function(data){
-			
-			if(data.startsWith("Results"))
+	//		alert(data);
+			if(data.startsWith("Success"))
 			{
-				alert("Data Successfully retrived");
-				document.getElementById("responce_table").innerHTML=data;
+				alert("Rating Successfully Recieved.");
+	//			document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
-	//			window.location.replace("http://10.2.8.180/andsmartnew/index.html?responce=Thanks%20for%20registration.");
+	//			window.location.replace("http://10.2.8.180/andsmart/index.html?responce=Thanks%20for%20registration.");
 			}
 			else	
-				alert("There is no such entry. Recheck your inputs fields");
+				alert("Either phoen no. don't match with ID proof or phoen no. does not exist.");
 		}
 	  ); 
 
@@ -99,7 +90,7 @@ function data(form)
 			//document.getElementById("responce").innerHTML=xmlhttp.responseText;
 			var df = xmlhttp.responseText;
 			if(df == "Success")
-				window.location.replace("/andsmartnew/index.html?responce=Thanks%20for%20registration.");
+				window.location.replace("/andsmart/index.html?responce=Thanks%20for%20registration.");
 				//alert('success');
 			else
 				alert('fail');
@@ -117,4 +108,4 @@ function data(form)
 //	var xmlhttp;
 //	xmlhttp.open("GET","http://10.2.8.180/PHP/getAllCustomers.php",true);
 //	xmlhttp.send(); 
-}
+} 
