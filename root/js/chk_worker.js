@@ -95,7 +95,7 @@ function data(form)
 		function(data){
 			if(data=="Success")
 			{
-				alert("data successfully enterd.");
+				alert("Data Successfully Submitted.");
 				window.location.replace("http://10.2.8.180/andsmartnew/index.html?responce=Thanks%20for%20registration.");
 			}
 			else	

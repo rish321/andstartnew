@@ -53,7 +53,7 @@ function data(form)
 				alert("Rating Successfully Recieved.");
 	//			document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
-	//			window.location.replace("http://10.2.8.180/andsmart/index.html?responce=Thanks%20for%20registration.");
+				window.location.replace("http://10.2.8.180/andsmartnew/index.html");
 			}
 			else	
 				alert("Either phoen no. don't match with ID proof or phoen no. does not exist.");

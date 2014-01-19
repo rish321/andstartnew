@@ -59,7 +59,7 @@ function data(form)
 			
 			if(data.startsWith("Results"))
 			{
-				alert("Data Successfully retrived");
+				alert("Data Successfully Retrieved");
 				document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
 	//			window.location.replace("http://10.2.8.180/andsmartnew/index.html?responce=Thanks%20for%20registration.");

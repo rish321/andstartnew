@@ -34,7 +34,7 @@ $result = mysqli_query($con,$query);
 if(mysqli_num_rows($result))
 {
 	echo "Results: <br /><br />";
-        echo "<table align='center' style='margin: 0px auto; width:80%'>";
+        echo "<table align='center' style='margin: 0px auto; width:100%'>";
         echo "<tr><th align='left' style='font-weight: bold; '> Name </th> <th align='left' style='font-weight: bold; '> Mobile No. </th>";
 	echo "<th align='left' style='font-weight: bold; '> City </th><th align='left' style='font-weight: bold; '> Area </th><th align='left' style='font-weight: bold; '> Language </th>  <th align='center' style='font-weight: bold; '> Rating </th> </tr>";
         while($row = mysqli_fetch_array($result))
