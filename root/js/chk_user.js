@@ -54,7 +54,7 @@ function data(form)
 	}
 
 
-	$.post('http://10.2.8.180/andsmartnew/result_user.php',{ json_obj:json }, 
+	$.post('http://10.2.8.188/andsmartnew/result_user.php',{ json_obj:json }, 
 		function(data){
 			
 			if(data.startsWith("Results"))
@@ -62,7 +62,7 @@ function data(form)
 				alert("Data Successfully Retrieved");
 				document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
-	//			window.location.replace("http://10.2.8.180/andsmartnew/index.html?responce=Thanks%20for%20registration.");
+	//			window.location.replace("http://10.2.8.188/andsmartnew/index.html?responce=Thanks%20for%20registration.");
 			}
 			else	
 				alert("There is no such entry. Recheck your inputs fields");
@@ -115,6 +115,6 @@ function data(form)
 	xmlhttp.send(params); */
  
 //	var xmlhttp;
-//	xmlhttp.open("GET","http://10.2.8.180/PHP/getAllCustomers.php",true);
+//	xmlhttp.open("GET","http://10.2.8.188/PHP/getAllCustomers.php",true);
 //	xmlhttp.send(); 
 }

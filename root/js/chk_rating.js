@@ -45,7 +45,7 @@ function data(form)
 	}
 
 
-	$.post('http://10.2.8.180/andsmartnew/rating_result.php',{ json_obj:json }, 
+	$.post('http://10.2.8.188/andsmartnew/rating_result.php',{ json_obj:json }, 
 		function(data){
 	//		alert(data);
 			if(data.startsWith("Success"))
@@ -53,7 +53,7 @@ function data(form)
 				alert("Rating Successfully Recieved.");
 	//			document.getElementById("responce_table").innerHTML=data;
 				//alert(data);
-				window.location.replace("http://10.2.8.180/andsmartnew/index.html");
+				window.location.replace("http://10.2.8.188/andsmartnew/index.html");
 			}
 			else	
 				alert("Either phoen no. don't match with ID proof or phoen no. does not exist.");
@@ -106,6 +106,6 @@ function data(form)
 	xmlhttp.send(params); */
  
 //	var xmlhttp;
-//	xmlhttp.open("GET","http://10.2.8.180/PHP/getAllCustomers.php",true);
+//	xmlhttp.open("GET","http://10.2.8.188/PHP/getAllCustomers.php",true);
 //	xmlhttp.send(); 
 } 

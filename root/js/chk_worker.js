@@ -2,7 +2,7 @@ function chk_worker()
 {
 //	alert("here");
 //	return false;
-	form = document.forms[0];
+	form = dument.forms[0];
 	mobileno = form.mobileno;
 	loc = form.mark;
 	loc2 = form.series;
@@ -52,7 +52,7 @@ function chk_worker()
 
 function data(form)
 {
-	var url = "http://10.2.8.180/andsmartnew/root/includes/worker_register_exce.php";
+	var url = "http://10.2.8.188/andsmartnew/root/includes/worker_register_exce.php";
 //	var params = "name=Awesome";
 	
 	mobileno = form.mobileno.value;
@@ -91,12 +91,12 @@ function data(form)
 
 //	alert(json);
 
-	$.post('http://10.2.8.180/andsmartnew/root/includes/worker_register_exce.php',{ json_obj:json }, 
+	$.post('http://10.2.8.188/andsmartnew/root/includes/worker_register_exce.php',{ json_obj:json }, 
 		function(data){
 			if(data=="Success")
 			{
 				alert("Data Successfully Submitted.");
-				window.location.replace("http://10.2.8.180/andsmartnew/index.html?responce=Thanks%20for%20registration.");
+				window.location.replace("http://10.2.8.188/andsmartnew/index.html?responce=Thanks%20for%20registration.");
 			}
 			else	
 				alert("Data entry fail. Recheck your entry");
@@ -149,6 +149,6 @@ function data(form)
 	xmlhttp.send(params); */
  
 //	var xmlhttp;
-//	xmlhttp.open("GET","http://10.2.8.180/PHP/getAllCustomers.php",true);
+//	xmlhttp.open("GET","http://10.2.8.188/PHP/getAllCustomers.php",true);
 //	xmlhttp.send(); 
 }
